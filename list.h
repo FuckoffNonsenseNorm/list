@@ -4,6 +4,14 @@
 
 # include <stdio.h>
 # include <stdlib.h>
+# include <stdint.h>
+
+
+# include <string.h>
+
+
+# define ERROR -1
+# define END_OF_LIST -2
 
 typedef struct t_node
 {
