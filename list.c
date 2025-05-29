@@ -46,14 +46,17 @@ t_node *append(t_node *head, char data)
 
 size_t	list_len(const t_node	*head)
 {
+	size_t			length;
 	const t_node	*current;
 
+	length = 0;
 	current = (const t_node *)head;
 	while (current)
 	{
 		current = current->next;
+		length++;
 	}
-	return (current - head);
+	return (length);
 }
 
 //list_tostr does not rewrite the data in the list. Therefore we must give the constant.
