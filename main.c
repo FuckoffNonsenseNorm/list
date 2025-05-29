@@ -25,7 +25,7 @@ int	main()
 	head = append(head, 'n');
 	head = append(head, 'g');
 	head = append(head, '\n');
-	line = list_tostr(head);
+	line = list_tostr((const t_node *)head);
 	printf("\n%s\n", line);
 	cleanup(head);
 	free(line);

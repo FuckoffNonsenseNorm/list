@@ -44,32 +44,32 @@ t_node *append(t_node *head, char data)
     return (head);
 }
 
-static size_t	list_len(t_node	*current)
+size_t	list_len(const t_node	*head)
 {
-	size_t	length;
+	const t_node	*current;
 
-	length = 0;
+	current = (const t_node *)head;
 	while (current)
 	{
 		current = current->next;
-		length++;
 	}
-	return (length);
+	return (current - head);
 }
 
-char *list_tostr(t_node *head)
+//list_tostr does not rewrite the data in the list. Therefore we must give the constant.
+char *list_tostr(const t_node *head)
 {
-    char *line;
-    t_node *current;
-    size_t length;
-    size_t i;
+    char	*line;
+    t_node	*current;
+    size_t	length;
+    size_t	i;
 
-	length = list_len(head);
+	length = list_len((const t_node *)head);
     line = malloc(sizeof(char) * (length + 1));
     if (!line)
         return NULL;
     allocation_counter++;
-    current = head;
+    current = (t_node *)head;
     i = 0;
     while (current)
 	{

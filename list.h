@@ -13,7 +13,7 @@
 # define ERROR -1
 # define END_OF_LIST -2
 
-typedef struct s_node
+typedef struct t_node
 {
 	char			data;
 	struct t_node	*next;
@@ -21,6 +21,7 @@ typedef struct s_node
 
 void	cleanup(t_node *head);
 t_node	*append(t_node *head, char data);
-char	*list_tostr(t_node *head);
+size_t  list_len(const t_node *current);
+char	*list_tostr(const t_node *head);
 
 #endif
