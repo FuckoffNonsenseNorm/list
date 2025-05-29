@@ -5,10 +5,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <stdint.h>
-
-
 # include <string.h>
-
 
 # define ERROR -1
 # define END_OF_LIST -2
@@ -21,7 +18,7 @@ typedef struct s_node
 
 void	cleanup(t_node *head);
 t_node	*append(t_node *head, char data);
-size_t  list_len(const t_node *current);
+size_t	list_len(const t_node *current);
 char	*list_tostr(const t_node *head);
 
 #endif
