@@ -19,4 +19,8 @@ typedef struct t_node
 	struct t_node	*next;
 }	t_node;
 
+void cleanup(t_node *head);
+t_node *append(t_node *head, char data);
+char *list_tostr(t_node *head);
+
 #endif
