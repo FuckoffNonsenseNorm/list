@@ -1,6 +1,5 @@
 #include "list.h"
 
-int	allocation_counter;
 
 int	main()
 {
@@ -8,7 +7,6 @@ int	main()
 	printf("------------test2---------------\n");
 	printf("--------appending nodes---------\n");
 	
-	allocation_counter = 0;
 	t_node*	head = NULL;
 	char*	line = NULL;
 	head = append(head, 'T');
@@ -29,7 +27,5 @@ int	main()
 	printf("\n%s\n", line);
 	cleanup(head);
 	free(line);
-	allocation_counter--;
-	printf("allocation_counter: %d\n", allocation_counter);
 	return 0;
 }
