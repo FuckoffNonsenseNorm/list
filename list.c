@@ -26,9 +26,9 @@ t_node	*append(t_node *head, char data)
 		return (NULL);
 	}
 	new->data = data;
-	new->next = next;
+	new->next = NULL;
 	if (head == NULL)
-		return (NULL);
+		return (new);
 	current = head;
 	while (current->next)
 		current = current->next;
